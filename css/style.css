@@ -1,22 +1,30 @@
+/* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 header {
     margin-bottom: 20px;
     padding: 10px;
     border: 2px solid orange;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
 }
 
 header h1, header p {
@@ -25,51 +33,77 @@ header h1, header p {
     margin: 10px 0;
 }
 
-header p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.button-container {
+.instruction-box {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 20px;
-    padding: 10px;
+    font-size: 30px;
+    margin: 1% 0;
     border: 2px solid orange;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #f9f9f9;
-    z-index: 10;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fedd44;
+    color: black;
 }
 
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-/* Adds hover effect for buttons */
-button:hover {
-  background-color: #b30000;
-}
-
-/* Style the content container section */
-.content-container {
-    margin: 20px auto;
-    padding: 20px;
-    border: 2px solid orange;
-    border-radius: 5px;
-    background-color: #fff;
-    min-height: 300px;
+.pictures {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5% 0;
+}
+
+.pictures > div {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
+    background-color: #fff;
+    border: 2px solid orange;
+    visibility: hidden;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.pictures img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.pictures button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.pictures button:hover {
+    background-color: #b30000;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.btns button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btns button:hover {
+    background-color: #b30000;
 }
