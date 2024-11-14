@@ -1,54 +1,44 @@
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Predefined picture containers
+  const aPicture = document.getElementById("a-picture");
+  const bPicture = document.getElementById("b-picture");
+  const cPicture = document.getElementById("c-picture");
 
-  const contentContainer = document.getElementById("content-container");
-
+  // Buttons to show/hide pictures
   const buttonA = document.getElementById("btn-a");
   const buttonB = document.getElementById("btn-b");
   const buttonC = document.getElementById("btn-c");
 
-  // Adds an event listener for button A
+  // Show button click functionality
   buttonA.addEventListener("click", () => {
-    // Sets the content for button A, including an image and a hide button
-    contentContainer.innerHTML = `
-            <div>
-                <img src="Images/css-letter-a.png" alt="A is for aspect-ratio">
-                <button id="hide-a">Hide Result</button>
-            </div>
-        `;
-    // Adds an event listener to hide the content when the hide button is clicked
-    document.getElementById("hide-a").addEventListener("click", () => {
-      contentContainer.innerHTML = "";
-    });
+    aPicture.style.visibility = "visible";
+    bPicture.style.visibility = "hidden";
+    cPicture.style.visibility = "hidden";
   });
 
-  // Adds an event listener for button B
   buttonB.addEventListener("click", () => {
-    // Sets content for button B, including an image and a hide button
-    contentContainer.innerHTML = `
-            <div>
-                <img src="Images/css-letter-b.png" alt="B is for border">
-                <button id="hide-b">Hide Result</button>
-            </div>
-        `;
-    // Adds an event listener to hide the content when the hide button is clicked
-    document.getElementById("hide-b").addEventListener("click", () => {
-      contentContainer.innerHTML = ""; 
-    });
+    aPicture.style.visibility = "hidden";
+    bPicture.style.visibility = "visible";
+    cPicture.style.visibility = "hidden";
   });
 
-  // Adds an event listener for button C
   buttonC.addEventListener("click", () => {
-    // Sets the content for button C, including an image and a hide button
-    contentContainer.innerHTML = `
-            <div>
-                <img src="Images/css-letter-c.png" alt="C is for colors">
-                <button id="hide-c">Hide Result</button>
-            </div>
-        `;
-    // Adds event listener to hide the content when the hide button is clicked
-    document.getElementById("hide-c").addEventListener("click", () => {
-      contentContainer.innerHTML = ""; 
-    });
+    aPicture.style.visibility = "hidden";
+    bPicture.style.visibility = "hidden";
+    cPicture.style.visibility = "visible";
+  });
+
+  // Hide button functionality for each picture
+  aPicture.querySelector("button").addEventListener("click", () => {
+    aPicture.style.visibility = "hidden";
+  });
+
+  bPicture.querySelector("button").addEventListener("click", () => {
+    bPicture.style.visibility = "hidden";
+  });
+
+  cPicture.querySelector("button").addEventListener("click", () => {
+    cPicture.style.visibility = "hidden";
   });
 });
